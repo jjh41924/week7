@@ -12,4 +12,11 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "products", force: :cascade do |t|
+    t.integer "price"
+    t.text "title"
+    t.text "description"
+    t.text "photo_url"
+  end
+
 end
