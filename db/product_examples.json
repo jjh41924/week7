@@ -1,0 +1,50 @@
+{ "products": [
+  {
+    "title": "Echo Dot",
+    "price": 2000,
+    "photo_url": "https://images-na.ssl-images-amazon.com/images/I/61ikAJnULvL._SX522_.jpg",
+    "description": "Echo Dot is a hands-free, voice-controlled device with a small built-in speaker—it can also connect to your speakers or headphones over Bluetooth or through a 3.5 mm audio cable to deliver stereo sound to the speakers you choose. Dot connects to the Alexa Voice Service to play music, make calls, send and receive messages, provide information, news, sports scores, weather, and more—instantly."
+  },
+  {
+    "title": "Desk Organizer",
+    "price": 1495,
+    "photo_url": "https://images-na.ssl-images-amazon.com/images/I/91CXGq5AIHL._SX522_.jpg",
+    "description": "This organizer helps you to organize Pen, note, and staples."
+  },
+  {
+    "title": "Wireless Speaker",
+    "price": 3000,
+    "photo_url": "https://images-na.ssl-images-amazon.com/images/I/71nkTOSLbRL._SY500_.jpg",
+    "description": "Roughly translated, \"Solo\" in Italian means \"alone\". You will feel anything but that when listening to Como Audio’s Solo, because Solo unlocks a world of musical entertainment. Be it tuning an Internet radio station from the other side of the globe, enjoying one of 30+ million songs from Spotify Connect, or streaming music via Bluetooth wireless technology, let Solo be your music concierge."
+  },
+  {
+    "title": "Mantel Clock",
+    "price": 5995,
+    "photo_url": "https://img1.etsystatic.com/177/0/12275651/il_570xN.1178021673_d76a.jpg",
+    "description": "A very attractive art deco style clock made by Ferranti of Manchester. It has a beautiful coloured, dark Bakelite case in excellent condition with no cracks or chips. There is a little bit of discolouration to the dial. I believe it to be a Ferranti No.3 synchronous mantel clock and is completely original, no quartz movement added! I have had it running for several days and it works smooth and quietly and seems to keep good time. Measures approx 15.8cm high x 15.5cm wide x 6.5cm deep."
+  },
+  {
+    "title": "Basket Cat Book",
+    "price": 2400,
+    "photo_url": "https://img1.etsystatic.com/107/1/8245013/il_570xN.1050819053_tuh7.jpg",
+    "description": "Basket Cat loves baskets - big baskets and small baskets, tall baskets and even the washing basket! But all Basket Cat wants is a basket of her very own. Where will she find one? The book contains nine colourful double page spreads that take you on an adventure with Basket Cat as she tries out all of the different baskets for size :)"
+  },
+  {
+    "title": "iPad Pro Sleeve",
+    "price": 2400,
+    "photo_url": "https://img0.etsystatic.com/125/5/5409876/il_570xN.947061328_euh8.jpg",
+    "description": "A new design for the iPad Pro with Apple Pencil users in mind. Now available for the new 10.5\" iPad Pro and the 12.9\" iPad Pro. This is the good stuff. We choose this felt specifically over the other German felts as it has a smoother, tighter surface and higher density which makes for more solid stitching. Two full body pieces plus a third that forms the pocket on the front... that's 9mm of felt to protect your goods. Our felt is hand selected for us to ensure we are supplied a consistent color & texture."
+  },
+  {
+    "title": "Custom Electric Guitar",
+    "price": 9900,
+    "photo_url": "https://img0.etsystatic.com/150/1/13588550/il_570xN.1087344098_kmq6.jpg",
+    "description": "This is my own custom designed electric guitar body. I designed the body to accept a standard Fender Stratocaster neck. I use Warmoth necks with this design. I will give you the option to pick wood species for the body, any appropriate neck from Warmoth (Gibson or Fender scale length), and the pickups.  In this example, this body is made from two pieces of solid walnut laminated at the center line so the sap wood creates a stripe. The neck is roasted maple with stainless steel frets and locking tuners. The humbuckers are GT500's from Monty's Guitars in England. The electronics are CTS for the pots and Switchcraft for the pickup selector and jack. The capacitor is an orange drop to match the pickups."
+  },
+  {
+    "title": "Mesh Wastebasket",
+    "price": 900,
+    "photo_url": "https://images-na.ssl-images-amazon.com/images/I/A1XkC6xtBPL._SY679_.jpg",
+    "description": "Combining a sleek industrial look with simple everyday convenience, this AmazonBasics mesh wastebasket helps keep work areas tidy and running more efficiently. The wastebasket features steel wire mesh in black, reinforced with a solid metal base and solid edging along the bottom and top rim. The durable mesh wastebasket holds its shape over time and offers subtle transparency, concealing contents while still making it possible to check at a glance if it needs to be emptied. The AmazonBasics mesh wastebasket can be used on its own or with a bag liner. Either way, it adds a touch of useful functionality and handsome style to any setting."
+  }
+]}

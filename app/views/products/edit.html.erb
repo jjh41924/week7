@@ -1,0 +1,33 @@
+<div class="page-header">
+  <h1>Edit Listing #<%= params[:id] %></h1>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">
+
+  <%= form_tag("/products/1", method: 'patch') do  %>
+
+    <div class="form-group">
+      <%= label_tag :title, "Product Title" %>
+      <%= text_field_tag :title, "Echo Dot", autofocus: true, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :price, "Price" %>
+      <%= number_field_tag :price, "12.00", class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :description, "Describe the item you're trying to sell:" %>
+      <%= text_area_tag :description, "Echo Dot is a hands-free, voice-controlled device with a small built-in speaker—it can also connect to your speakers or headphones over Bluetooth or through a 3.5 mm audio cable to deliver stereo sound to the speakers you choose. Dot connects to the Alexa Voice Service to play music, make calls, send and receive messages, provide information, news, sports scores, weather, and more—instantly.",
+                        rows: 5, class: 'form-control' %>
+    </div>
+
+    <%= submit_tag "Update Item", class: 'btn btn-success btn-lg'%>
+    or
+    <%= link_to "Cancel", "/products/1" %>
+
+  <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h1>User Stories and Business Rules</h1>
+</div>
+
+<h4>User Stories</h4>
+
+<ol>
+  <li>As a visitor, I want to see what's for sale.</li>
+  <li>As a visitor, I want to click on a product to see its details.</li>
+  <li>As a visitor, I want to sign up for a free account so that I can buy and sell products.</li>
+  <li>As a visitor, I want to read the reviews for each product.</li>
+  <li>As a visitor, I want to see the average review rating of each product.</li>
+  <li>As a user, I want to buy something with a credit card.</li>
+  <li>As a user, I want to review an item.</li>
+  <li>As a user, I want to delete a review that I wrote.</li>
+  <li>As a user, I want to sell something.</li>
+  <li>As a seller, I want to modify my item's title, photo, description, and/or price.</li>
+  <li>As a seller, I want to delete an item.</li>
+  <li>As a buyer, I want to see my order history.</li>
+</ol>
+
+
+<h4>Business Rules</h4>
+
+<ol>
+  <li>Prices are stored as cents in the database.  When displayed, prices are divided by 100.</li>
+  <li>A review consists of a star rating from 1 to 5 and some text.</li>
+  <li>Buying an item creates an order for that one item.  There is no "cart".</li>
+  <li>Credit card numbers must be valid according to <%= link_to "the Luhn algorithm", 'http://www.validcreditcardnumber.com/' %></li>
+  <li>Passwords must be encrypted.</li>
+</ol>
