@@ -1,30 +1,30 @@
 <div class="page-header">
-  <h1>Echo Dot
+  <h1><%= @product.title %>
     <small class="rating">&bigstar;&bigstar;&bigstar;&bigstar;&star;</small>
   </h1>
   <p>Sold by <%= link_to "Cookie Monster", '#' %>.</p>
   <p>
 
-    <%= link_to "Edit This Listing", "/products/1/edit" %>
+    <%= link_to "Edit This Listing", "/products/#{@product.id}/edit" %>
     |
-    <%= link_to "Delete This Listing", "/products/1", method: 'delete' %>
+    <%= link_to "Delete This Listing", "/products/#{@product.id}", method: 'delete', data: { confirm: "Are you crazy?" } %>
   </p>
 </div>
 
 <div class="row">
   <div class="col-sm-4">
-    <%= image_tag "https://images-na.ssl-images-amazon.com/images/I/61ikAJnULvL._SX522_.jpg",
+    <%= image_tag @product.photo_url,
                   class: 'img-responsive' %>
   </div>
 
   <div class="col-sm-8">
-    <p class="price">$12.00
+    <p class="price"><%= number_to_currency(@product.price / 100.0) %>
       <%= link_to "Buy Now", '#', class: "btn btn-lg btn-success" %>
     </p>
 
 
     <p>
-      Echo Dot is a hands-free, voice-controlled device with a small built-in speaker—it can also connect to your speakers or headphones over Bluetooth or through a 3.5 mm audio cable to deliver stereo sound to the speakers you choose. Dot connects to the Alexa Voice Service to play music, make calls, send and receive messages, provide information, news, sports scores, weather, and more—instantly.
+      <%= @product.description %>
     </p>
 
     <hr>

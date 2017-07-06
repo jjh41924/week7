@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'products#index'
 
   get '/products' => 'products#index'
+  post '/products' => 'products#create'
 
   get '/products/new' => 'products#new'
 
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
 
   get '/products/:id/edit' => 'products#edit'
 
+  delete '/products/:id' => 'products#destroy'
 
   get '/help' => 'user_stories#index'
 

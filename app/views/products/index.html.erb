@@ -1,17 +1,17 @@
 <div class="row">
 
-  <% Product.all.each do |p| %>
+  <% @products.each do |p| %>
 
   <!-- Product Thumbnail -->
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
 
       <%= link_to image_tag(p.photo_url),
-                  "/products/1",
+                  "/products/#{p.id}",
                   alt: "Echo Dot", class: 'img-responsive' %>
 
       <div class="caption">
-        <h4><%= link_to p.title, '/products/1'%></h4>
+        <h4><%= link_to p.title, "/products/#{p.id}"%></h4>
         <p class="rating">&bigstar;&bigstar;&bigstar;&bigstar;&star;</p>
         <p>6 reviews.</p>
         <p>Sold by: <%= link_to 'Cookie Monster', '#' %></p>

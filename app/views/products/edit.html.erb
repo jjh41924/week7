@@ -5,21 +5,21 @@
 <div class="row">
   <div class="col-sm-4">
 
-  <%= form_tag("/products/1", method: 'patch') do  %>
+  <%= form_tag("/products/#{@product.id}", method: 'patch') do  %>
 
     <div class="form-group">
       <%= label_tag :title, "Product Title" %>
-      <%= text_field_tag :title, "Echo Dot", autofocus: true, class: 'form-control' %>
+      <%= text_field_tag :title, @product.title, autofocus: true, class: 'form-control' %>
     </div>
 
     <div class="form-group">
       <%= label_tag :price, "Price" %>
-      <%= number_field_tag :price, "12.00", class: 'form-control' %>
+      <%= number_field_tag :price, @product.price / 100.0, class: 'form-control' %>
     </div>
 
     <div class="form-group">
       <%= label_tag :description, "Describe the item you're trying to sell:" %>
-      <%= text_area_tag :description, "Echo Dot is a hands-free, voice-controlled device with a small built-in speaker—it can also connect to your speakers or headphones over Bluetooth or through a 3.5 mm audio cable to deliver stereo sound to the speakers you choose. Dot connects to the Alexa Voice Service to play music, make calls, send and receive messages, provide information, news, sports scores, weather, and more—instantly.",
+      <%= text_area_tag :description, @product.description,
                         rows: 5, class: 'form-control' %>
     </div>
 
