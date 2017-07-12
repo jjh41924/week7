@@ -24,7 +24,11 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-        <p class="navbar-text">Hello, Margaret!</p>
+        <% if session["user_id"].present? %>
+          <% user = User.find_by(id: session["user_id"]) %>
+          <p class="navbar-text">Hello, <%= user.name %></p>
+        <% end %>
+
         <li><%= link_to "Sign Up", "/users/new" %></li>
         <li><%= link_to "Sign In", '/sessions/new' %></li>
         <li><%= link_to "Sign Out", '/logout', method: :delete %></li>
