@@ -1,0 +1,32 @@
+<div class="page-header">
+  <h1>Sign Up</h1>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">
+
+  <%= form_tag("/users", method: 'post') do  %>
+
+    <div class="form-group">
+      <%= label_tag :name, "Your name:" %>
+      <%= text_field_tag :name, "", autofocus: true, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :email, "Email Address" %>
+      <%= text_field_tag :email, "", 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :password, "Pick a Password" %>
+      <%= text_field_tag :password, "", class: 'form-control' %>
+    </div>
+
+    <%= submit_tag "Sign Me Up", class: 'btn btn-success btn-lg'%>
+    or
+    <%= link_to "Cancel", root_url %>
+
+  <% end %>
+
+  </div>
+</div>

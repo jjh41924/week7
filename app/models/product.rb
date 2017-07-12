@@ -1,6 +1,2 @@
 class Product < ApplicationRecord
-
-
-
-
 end

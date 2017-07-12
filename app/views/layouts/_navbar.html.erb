@@ -13,7 +13,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-section">
       <ul class="nav navbar-nav">
-        <li><%= link_to 'Products', '/products' %></a></li>
         <li><%= link_to 'Sell Something!', "/products/new" %></li>
         <li><%= link_to 'User Stories', "/help" %></li>
       </ul>
@@ -25,9 +24,11 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
+        <p class="navbar-text">Hello, Margaret!</p>
         <li><%= link_to "Sign Up", "/users/new" %></li>
-        <li><%= link_to "Sign In", '#' %></li>
-        <li><%= link_to "My Account", '#' %></li>
+        <li><%= link_to "Sign In", '/sessions/new' %></li>
+        <li><%= link_to "Sign Out", '/logout', method: :delete %></li>
+        <li><%= link_to "My Account", "/users/#{User.first.id}" %></li>
       </ul>
 
     </div>

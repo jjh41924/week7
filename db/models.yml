@@ -1,11 +1,29 @@
 Product
+  user_id: integer
   price: integer
   title: text
   description: text
   photo_url: text
+  created_at: datetime
+  updated_at: datetime
 
+Review
+  product_id: integer
+  rating: integer
+  content: text
+  created_at: text
 
+User
+  name: text
+  email: text
+  password: text
+  created_at: text
+  updated_at: text
 
+Order
+  user_id: integer
+  product_id: integer
+  created_at: datetime
 
 
 # This file allows you to specify your domain model

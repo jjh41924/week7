@@ -6,7 +6,12 @@
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
 
-      <%= link_to image_tag(p.photo_url),
+      <% photo_url = p.photo_url %>
+      <% if photo_url.blank? %>
+      <%   photo_url = "http://via.placeholder.com/350x350?text=no+photo" %>
+      <% end %>
+
+      <%= link_to image_tag(photo_url),
                   "/products/#{p.id}",
                   alt: "Echo Dot", class: 'img-responsive' %>
 
