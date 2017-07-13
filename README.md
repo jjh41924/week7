@@ -16,8 +16,6 @@ will not review everything in class.  All prewritten code can be found here:
 * db/seeds.rb
 
 
-After class, this README file will be updated again based on what
-we actually covered.
 
 Detailed requirements for the Project Milestone, which is due August 2, will be available this weekend.
 
@@ -33,6 +31,15 @@ properly.
 I will be using `rails db:seed` in class as a way for you to instantly
 hydrate your database with lots of useful test data so that you can avoid
 the tedium of using the `rails console` to create rows of data to play with.
+
+### HTTP is a Stateless Protocol
+
+HTTP 1.x is a request-response protocol. Each request-response cycle is independent.  The
+server cannot maintain state from one request
+to the next.  Once a response has been sent
+to the client, the server loses any state
+it had accumulated during the processing of
+the request.
 
 
 ### Cookies and Sessions

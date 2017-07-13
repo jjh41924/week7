@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "product_id"
     t.integer "rating"
     t.text "content"
-    t.text "created_at"
+    t.datetime "created_at"
     t.index ["product_id"], name: "index_reviews_on_product_id"
   end
 

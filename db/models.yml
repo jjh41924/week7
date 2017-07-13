@@ -11,7 +11,7 @@ Review
   product_id: integer
   rating: integer
   content: text
-  created_at: text
+  created_at: datetime
 
 User
   name: text
