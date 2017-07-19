@@ -10,17 +10,20 @@ class ProductsController < ApplicationController
   end
 
   def new
+    @product = Product.new
   end
 
   def create
-    p = Product.new
-    p.title = params["title"]
-    p.price = params["price"].to_f * 100
-    p.description = params["description"]
-    p.photo_url = params["photo_url"]
-    p.save
-
-    redirect_to "/products", notice: 'Product successfully created.'
+    @product = Product.new
+    @product.title = params["title"]
+    @product.price = params["price"].to_f * 100
+    @product.description = params["description"]
+    @product.photo_url = params["photo_url"]
+    if @product.save
+      redirect_to "/products", notice: 'Product successfully created.'
+    else
+      render "new"
+    end
   end
 
   def edit
@@ -28,14 +31,16 @@ class ProductsController < ApplicationController
   end
 
   def update
-    p = Product.find_by(id: params["id"])
-    p.title = params["title"]
-    p.price = params["price"].to_f * 100
-    p.description = params["description"]
-    p.photo_url = params["photo_url"]
-    p.save
-
-    redirect_to "/products/#{p.id}", notice: 'Product successfully updated.'
+    @product = Product.find_by(id: params["id"])
+    @product.title = params["title"]
+    @product.price = params["price"].to_f * 100
+    @product.description = params["description"]
+    @product.photo_url = params["photo_url"]
+    if @product.save
+      redirect_to "/products/#{@product.id}", notice: 'Product successfully updated.'
+    else
+      render "edit"
+    end
   end
 
   def destroy
