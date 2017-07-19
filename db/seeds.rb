@@ -36,6 +36,7 @@ User.all.each do |user|
   end
 end
 
+puts "#{User.count} users."
 puts "#{Product.count} products."
 puts "#{Review.count} reviews."
 puts "#{Order.count} orders."

@@ -1,7 +1,15 @@
 <div class="page-header">
   <h1><%= @product.title %>
-    <small class="rating">&bigstar;&bigstar;&bigstar;&bigstar;&star;</small>
+    <small class="rating">
+      <% @reviews.average(:rating).to_i.times do |n| %>
+        &bigstar;
+      <% end %>
+      <% 5 - @reviews.average(:rating).to_i.times do |n| %>
+        &star;
+      <% end %>
+    </small>
   </h1>
+
   <p>Sold by <%= link_to "Cookie Monster", '#' %>.</p>
   <p>
 
@@ -37,6 +45,7 @@
 
 
     <%= form_tag("/reviews", method: 'post') do %>
+      <%= hidden_field_tag :product_id, @product.id %>
       <h3>Add Your Review</h3>
       <p>
         <%= label_tag :rating %>
@@ -48,17 +57,21 @@
 
     <hr>
     <h3>Reviews</h3>
-    <p>&bigstar;&bigstar;&bigstar;&star;&star;</p>
-    <p>
-      Not bad but it's too hard to switch on and off.  You have to actually get
-      off the couch.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
 
-    <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
-    <p>
-      Amazing.  You say "pizza" and you have pizza.  You say "house" and you
-      have a new house.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <% @reviews.each do |review| %>
+      <p>
+        <% review.rating.to_i.times do |n| %>
+          &bigstar;
+        <% end %>
+        <% 5 - review.rating.to_i.times do |n| %>
+          &star;
+        <% end %>
+      </p>
+      <p>
+        <%= review.content %>
+      </p>
+    <% end %>
+
   </div>
 
 </div>

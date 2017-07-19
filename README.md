@@ -1,4 +1,108 @@
-# Week 4
+# Week 5
+
+The themes for this week are:
+
+* Models are everything
+* Security is everything, too
+
+### Model Validations
+
+Recall that a domain model has two responsibilities:
+
+1. Represent something in the real world
+2. Be a gateway for data related to that real-world thing
+
+Each model should also guarantee the integrity of the
+data it persists to and from the database.  In Rails, the rules
+pertaining to data values that can be stored in the
+database are called _validation rules_.
+
+Implementing data rules and policies belong in the model,
+so Rails provides a DSL specific to validations.
+
+When you call `.save`, `.create`, or `.update`, all validation
+rules will be run, and the object will not be saved if any
+of the validations fail.
+
+You can know if something went wrong:
+
+1. by checking the return value of `.save`
+1. by checking the `.errors` collection on the object
+
+Here's a handy tip: `.errors.full_messages` will return an array
+of all of the validation failures.
+
+Finally, did you know that HTTP is a stateless protocol?  You did?
+Awesome.  So then you already know that if you're trying to save an
+object and a validation rule fails, you'll need to cope with it
+_during that same request_, or you'll lose all of the validation data.
+
+For a complete overview of all validations, see the Rails Guides:
+
+http://guides.rubyonrails.org/active_record_validations.html
+
+
+
+
+### Security
+
+**Authentication**
+
+Last week we learned how to use cookies to let users sign in.  That
+is called authentication.
+
+**Authorization**
+
+This week we will learn how _authorize_ users to perform certain actions.
+The bad news is that there isn't just one way to authorize an action, there
+are two.  The good news is, there are only two ways to authorize an action.
+
+1. Put code in the controller action method to redirect the user away from
+the action.  For example, if someone is trying to view a user profile that's
+not their own, we can redirect them back to the home page instead.
+2. Use conditional logic in the view to hide or disable the unauthorized
+activity. For example, if only logged-in users should be able to write a review,
+we can use an `if` statement to make sure someone is logged in before
+rendering the form.
+
+**Hiding Things**
+
+* We use the `bcrypt` gem to help us encrypt passwords with a one-way hash.
+* We use `has_secure_password` in our `User` model to automatically encrypt
+passwords, but we must have a string column named `password_digest` in our model.
+We will gain an in-memory-only attribute accessor named :password, and assigning
+a value there will automatically be encrypted into the `password_digest` column.
+We also get a very helpful method named `.authenticate()` that can test a plain-text
+password against the encrypted hash on our behalf.  
+* We generally use `password_field_tag` in HTML forms to try to hide the password.  It's not
+very secure, though.
+
+Details on `has_secure_password` here: http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password
+
+
+That's all we need to know for this course, but if you're curious to learn more:
+http://guides.rubyonrails.org/security.html
+
+### Model Associations
+
+In a relational database, we relate one table to the next by inventing
+foriegn key columns and filling them with the correct values, so that
+rows from one table will be related to another.  SQL queries can leverage
+this to pull large swaths of related data from multiple tables in
+one fell swoop.
+
+But we prefer to use Ruby, not SQL.  We've already seen how to use
+`.find_by` and `.where` to query for related rows of data from different
+tables.  We can also write custom Ruby methods to do this work for us,
+so that's what we'll be doing in class.
+
+
+### RESTful Routing
+
+Always use `rails routes` as the authority on the routes that your application supports.
+Don't trust your eyes by simply reading the `config/routes.rb` file.
+
+## WEEK 4
 
 The themes for this week are:
 
