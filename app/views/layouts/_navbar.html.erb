@@ -27,12 +27,13 @@
         <% if session["user_id"].present? %>
           <% user = User.find_by(id: session["user_id"]) %>
           <p class="navbar-text">Hello, <%= user.name %></p>
+          <li><%= link_to "My Account", "/users/#{user.id}" %></li>
+          <li><%= link_to "Sign Out", '/logout', method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign Up", "/users/new" %></li>
+          <li><%= link_to "Sign In", '/sessions/new' %></li>
         <% end %>
 
-        <li><%= link_to "Sign Up", "/users/new" %></li>
-        <li><%= link_to "Sign In", '/sessions/new' %></li>
-        <li><%= link_to "Sign Out", '/logout', method: :delete %></li>
-        <li><%= link_to "My Account", "/users/#{User.first.id}" %></li>
       </ul>
 
     </div>

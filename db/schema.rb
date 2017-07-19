@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.text "email"
     t.text "created_at"
     t.text "updated_at"
-    t.text "password_digest"
+    t.text "password"
   end
 
 end
