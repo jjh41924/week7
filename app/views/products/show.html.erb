@@ -43,16 +43,19 @@
 
     <hr>
 
-
-    <%= form_tag("/reviews", method: 'post') do %>
-      <%= hidden_field_tag :product_id, @product.id %>
-      <h3>Add Your Review</h3>
-      <p>
-        <%= label_tag :rating %>
-        <%= select_tag :rating, options_for_select([1,2,3,4,5]), prompt: "Select 1 to 5...", class: '' %>
-      </p>
-      <p><%= text_area_tag :content, "", rows: 3, class: 'form-control' %></p>
-      <%= submit_tag "Submit", class: 'btn btn-primary' %>
+    <% if session["user_id"].present? %>
+      <%= form_tag("/reviews", method: 'post') do %>
+        <%= hidden_field_tag :product_id, @product.id %>
+        <h3>Add Your Review</h3>
+        <p>
+          <%= label_tag :rating %>
+          <%= select_tag :rating, options_for_select([1,2,3,4,5]), prompt: "Select 1 to 5...", class: '' %>
+        </p>
+        <p><%= text_area_tag :content, "", rows: 3, class: 'form-control' %></p>
+        <%= submit_tag "Submit", class: 'btn btn-primary' %>
+      <% end %>
+    <% else %>
+      <p><%= link_to "Sign in to write a review", '/sessions/new' %></p>
     <% end %>
 
     <hr>

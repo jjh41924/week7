@@ -17,7 +17,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params["id"])
-    @orders = Order.where(user_id: @user.id)
+
+    if @user.present? && @user.id == session["user_id"]
+      @orders = Order.where(user_id: @user.id)
+    else
+      redirect_to root_url, notice: "Nice try!"
+    end
   end
 
 

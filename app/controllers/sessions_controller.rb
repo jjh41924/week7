@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     u = User.find_by(email: params["email"])
 
     if u != nil
-      if u.password == params["password"]
+      if u.authenticate(params["password"])
         # cookies["user_id"] = u.id
         session["user_id"] = u.id
         redirect_to "/", notice: "Welcome back, #{u.name}!"

@@ -16,7 +16,7 @@ Review
 User
   name: text
   email: text
-  password: text
+  password_digest: text
   created_at: text
   updated_at: text
 
