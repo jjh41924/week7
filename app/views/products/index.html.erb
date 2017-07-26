@@ -26,7 +26,7 @@
           <%= link_to "[see more]", '/products/1' %>
         </p>
         <p class="price"><%= number_to_currency(p.price / 100.0) %></p>
-        <p><a href="#" class="btn btn-primary" role="button">Buy Now</a>
+        <p><a href="/orders/new?product_id=<%= p.id %>" class="btn btn-primary" role="button">Buy Now</a>
         </p>
       </div>
     </div>

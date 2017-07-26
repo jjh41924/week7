@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "user_id"
     t.integer "product_id"
     t.datetime "created_at"
+    t.text "card_number"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end

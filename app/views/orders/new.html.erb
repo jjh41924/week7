@@ -1,0 +1,61 @@
+<div class="page-header">
+  <h1>Place Order</h1>
+</div>
+
+<% if @order.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><strong><%= msg %></strong> </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="row">
+  <!-- Product Thumbnail -->
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+
+      <% photo_url = @order.product.photo_url %>
+      <% if photo_url.blank? %>
+      <%   photo_url = "http://via.placeholder.com/350x350?text=no+photo" %>
+      <% end %>
+
+      <%= link_to image_tag(photo_url),
+                  "/products/#{@order.product.id}",
+                  alt: "Echo Dot", class: 'img-responsive' %>
+
+      <div class="caption">
+        <h4><%= link_to @order.product.title, "/products/#{@order.product.id}"%></h4>
+        <p class="rating">&bigstar;&bigstar;&bigstar;&bigstar;&star;</p>
+        <p>6 reviews.</p>
+        <p>Sold by: <%= link_to 'Cookie Monster', '#' %></p>
+
+        <p>
+          <%= truncate @order.product.description, length: 40 %>
+          <%= link_to "[see more]", '/products/1' %>
+        </p>
+        <p class="price"><%= number_to_currency(@order.product.price / 100.0) %></p>
+        <p><a href="#" class="btn btn-primary" role="button">Buy Now</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Details -->
+
+  <div class="col-sm-6 col-md-3">
+
+    <h3>Payment Details</h3>
+
+    <%= form_tag "/orders" do %>
+      <%= hidden_field_tag :product_id, @order.product.id %>
+      <div class="form-group">
+        <%= label_tag :card_number, "Credit Card Number:" %>
+        <%= text_field_tag :card_number, "", autofocus: true, class: 'form-control' %>
+      </div>
+      <%= submit_tag "Place My Order", class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>

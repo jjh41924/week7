@@ -3,18 +3,18 @@ class Order < ApplicationRecord
   belongs_to :product
   belongs_to :user
 
-  # General form
-  # belongs_to :product, class_name: "Product",
-  #                      foreign_key: :product_id
+  def total_amount
+    (product.price / 100.0).round(2)
+  end
+  
+  def valid_credit_card_number
+    # TODO: implement Luhn algorithm here
+    #
+    # To cause this validation to stop the persistence chain,
+    # simply add an error to the .errors collection that is
+    # attached to this object.
 
-  # def product
-  #   Product.find_by(id: self.product_id)
-  # end
-  #
-  # def user
-  #   User.find_by(id: self.user_id)
-  # end
-
+  end
 
 
 end

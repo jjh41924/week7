@@ -32,7 +32,10 @@ end
 Order.delete_all
 User.all.each do |user|
   rand(3..10).times do
-    Order.create user_id: user.id, product_id: Product.sample.id, created_at: rand(1..14).days.ago
+    Order.create user_id: user.id,
+                 product_id: Product.sample.id,
+                 card_number: '4242424242424242',
+                 created_at: rand(3..60).days.ago
   end
 end
 

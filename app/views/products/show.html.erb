@@ -33,7 +33,7 @@
 
   <div class="col-sm-8">
     <p class="price"><%= number_to_currency(@product.price / 100.0) %>
-      <%= link_to "Buy Now", '#', class: "btn btn-lg btn-success" %>
+      <%= link_to "Buy Now", "/orders/new?product_id=#{product_id=@product.id}", class: "btn btn-lg btn-success" %>
     </p>
 
 

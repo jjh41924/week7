@@ -1,4 +1,16 @@
-# Week 5
+# Week 6
+
+The theme for this week is:
+
+![Refactor All The Things](http://i.imgur.com/wEioQuZ.jpg)
+
+For the first half of class, we will explore a few techniques in Rails
+that enable us to simply our code.
+
+(The second half of class is the midterm.)
+
+
+### Week 5
 
 The themes for this week are:
 
