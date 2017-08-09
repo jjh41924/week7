@@ -1,3 +1,10 @@
+Get the code from GitHub for Week7
+
+BUT do not run bundle install yet!
+
+(if you already did, it's probably ok)
+---------------------------------------------
+
 # Week 7
 
 The theme for this week is _real-world web development_.
@@ -45,6 +52,8 @@ The basic structure of an HTTP response looks like this:
 * `config/environment/rb`
 * `config/environments/*.yml`
 * Production deployment
+
+View the Source, Luke!
 
 See the [Heroku Cheat Sheet](notes-heroku.md) in this folder for a cheat sheet.
 
