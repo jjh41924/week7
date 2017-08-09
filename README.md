@@ -1,4 +1,37 @@
-# Week 6
+# Week 7
+
+The theme for this week is _real-world web development_.
+
+### More About HTTP
+
+* HTTP client software: curl
+
+### Code Environments
+
+* Development vs Test vs Production
+* `config/environment/rb`
+* `config/environments/*.yml`
+* Production deployment
+
+See the [Heroku Cheat Sheet](notes-heroku.md) in this folder for a cheat sheet.
+
+### More About Models
+
+* The `:dependent` option for `has_many` associations
+* Limits and Pagination
+* Example: Kaminari
+
+### More About Front-End Development
+
+* Google Web Fonts
+* Font Awesome (alternative to custom icons/graphics)
+* CSS Frameworks (Bootstrap, Foundation, etc.)
+* Responsive design
+
+
+
+
+### Week 6
 
 The theme for this week is:
 
