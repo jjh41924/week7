@@ -5,6 +5,37 @@ The theme for this week is _real-world web development_.
 ### More About HTTP
 
 * HTTP client software: curl
+* Popular curl options: -i  -v  -H
+* Net::HTTP.get('google.com', '/') or Net::HTTP.get_response('google.com', '/')
+* https://ruby-doc.org/stdlib-2.4.1/libdoc/net/http/rdoc/Net/HTTP.html
+* https://ruby-doc.org/stdlib-2.4.0/libdoc/open-uri/rdoc/OpenURI.html
+* Python: https://docs.python.org/3/library/http.client.html#examples
+* Java: http://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html
+
+The basic structure of an HTTP request looks like this:
+
+|------------|
+| header 1   |
+| header 2   |
+| header 3   |
+| header 4   |
+| header ..  |
+|------------|
+| body       |
+|------------|
+
+The basic structure of an HTTP response looks like this:
+
+|------------|
+| header 1   |
+| header 2   |
+| header 3   |
+| header 4   |
+| header ..  |
+|------------|
+| body       |
+|------------|
+
 
 ### Code Environments
 
@@ -21,12 +52,10 @@ See the [Heroku Cheat Sheet](notes-heroku.md) in this folder for a cheat sheet.
 * Limits and Pagination
 * Example: Kaminari
 
-### More About Front-End Development
 
-* Google Web Fonts
-* Font Awesome (alternative to custom icons/graphics)
-* CSS Frameworks (Bootstrap, Foundation, etc.)
-* Responsive design
+
+
+<hr>
 
 
 
