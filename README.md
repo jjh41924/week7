@@ -14,6 +14,7 @@ The theme for this week is _real-world web development_.
 
 The basic structure of an HTTP request looks like this:
 
+```
 |------------|
 | header 1   |
 | header 2   |
@@ -23,9 +24,10 @@ The basic structure of an HTTP request looks like this:
 |------------|
 | body       |
 |------------|
-
+```
 The basic structure of an HTTP response looks like this:
 
+```
 |------------|
 | header 1   |
 | header 2   |
@@ -35,7 +37,7 @@ The basic structure of an HTTP response looks like this:
 |------------|
 | body       |
 |------------|
-
+```
 
 ### Code Environments
 
