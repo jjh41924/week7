@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @products = Product.page(params["page"]).per(2)
   end
 
   def show
@@ -46,6 +46,7 @@ class ProductsController < ApplicationController
   def destroy
     product = Product.find_by(id: params["id"])
     product.delete
+    # TO DO: Delete all existing reviews
     redirect_to "/products",  notice: 'Product toasted!'
   end
 end

@@ -1,3 +1,10 @@
+
+<%= paginate @products %>
+<p>
+<% (Product.count / 2).times do |page| %>
+  <%= link_to "Page #{page}", "/products?page=#{page}" %> |
+<% end %>
+</p>
 <div class="row">
 
   <% @products.each do |p| %>
